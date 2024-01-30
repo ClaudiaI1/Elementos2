@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDENAR ARREGLO</title>
+</head>
+<body>
+  
+<script src="./Ejercicio2.js"></script> 
+
+<script>
+/* Ordenar ["unacadena",3,9,1,10,500,1,10,true] */ 
+
+function ordenarNumeros(arr) {
+   var numeros = arr.filter(function(item)
+ {
+return typeof item === 'number';
+});
+
+for (var i = 0; i < numeros.length - 1; i++)  {
+for (var j = 0; j < numeros.length - 1; i++ )  {
+
+    if (numeros [j] < numeros [j+1])  {
+    var temp = numeros[j];
+    numeros [j] = numeros [j+1];
+    numeros [j+1] = temp;
+       }
+    }
+}
+
+return numeros;
+}
+
+var arreglo =
+["unacadena",3,9,1,10,500,1,10,true];
+var numerosOrdenados =
+ordenarNumeros(arreglo)
+console.log(numerosOrdenados);
+  
+   </script>
+
+</body>
+</html>
